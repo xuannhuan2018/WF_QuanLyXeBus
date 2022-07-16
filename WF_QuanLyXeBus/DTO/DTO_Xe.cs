@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WF_QuanLyXeBus.DTO
 {
-    public class XeDTO
+    public class DTO_Xe
     {
         private string maxe;
         private string bienso;
@@ -16,6 +16,7 @@ namespace WF_QuanLyXeBus.DTO
         private DateTime ngaysanxuat;
         private int chukybaohanh;
         private string matuyen;
+
 
         public string Maxe { get => maxe; set => maxe = value; }
         public string Bienso { get => bienso; set => bienso = value; }
@@ -27,12 +28,12 @@ namespace WF_QuanLyXeBus.DTO
         public string Matuyen { get => matuyen; set => matuyen = value; }
 
 
-        public XeDTO()
+        public DTO_Xe()
         {
 
         }
 
-        public XeDTO(string maxe, string bienso, string loaixe, int soghe, int congsuat, DateTime ngaysx, int chuky, string matuyen)
+        public DTO_Xe(string maxe, string bienso, string loaixe, int soghe, int congsuat, DateTime ngaysx, int chuky, string matuyen)
         {
             this.matuyen = matuyen;
             this.maxe = maxe;

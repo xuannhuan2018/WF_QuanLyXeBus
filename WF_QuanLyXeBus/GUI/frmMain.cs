@@ -15,6 +15,7 @@ namespace WF_QuanLyXeBus.GUI
         public frmMain()
         {
             InitializeComponent();
+   
         }
     }
 }

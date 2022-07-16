@@ -46,12 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\DBConnection.cs" />
-    <Compile Include="DTO\DonViXeDTO.cs" />
-    <Compile Include="DTO\TaiKhoanDTO.cs" />
-    <Compile Include="DTO\TaiXeDTO.cs" />
-    <Compile Include="DTO\TuyenXeDTO.cs" />
-    <Compile Include="DTO\XeDTO.cs" />
+    <Compile Include="BUS\BUS_Authentication.cs" />
+    <Compile Include="DAL\DAL_Authentication.cs" />
+    <Compile Include="DAL\DAL_DBConnection.cs" />
+    <Compile Include="DTO\DTO_DonViXe.cs" />
+    <Compile Include="DTO\DTO_TaiKhoan.cs" />
+    <Compile Include="DTO\DTO_TaiXe.cs" />
+    <Compile Include="DTO\DTO_TuyenXe.cs" />
+    <Compile Include="DTO\DTO_Xe.cs" />
     <Compile Include="GUI\Add_GUI\frmAddDonVi.cs">
       <SubType>Form</SubType>
     </Compile>

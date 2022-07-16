@@ -45,6 +45,7 @@ namespace WF_QuanLyXeBus
             this.btnDangNhap.TabIndex = 0;
             this.btnDangNhap.Text = "ĐĂNG NHẬP";
             this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // btnThoat
             // 
@@ -54,6 +55,7 @@ namespace WF_QuanLyXeBus
             this.btnThoat.TabIndex = 1;
             this.btnThoat.Text = "THOÁT";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // txtUsername
             // 
