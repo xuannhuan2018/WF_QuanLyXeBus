@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace WF_QuanLyXeBus.DAL
 {
@@ -13,6 +14,7 @@ namespace WF_QuanLyXeBus.DAL
     {
         private SqlDataAdapter myAdapter;
         private SqlConnection conn;
+        private StringBuilder errorMessages;
 
         public DAL_DBConnection()
         {
@@ -27,8 +29,40 @@ namespace WF_QuanLyXeBus.DAL
             }
             return conn;
         }
+        public DataTable executeSelectQuery(String query)
+        {
+            SqlCommand myCommand = new SqlCommand();
+            DataTable dataTable = new DataTable();
+            myAdapter = new SqlDataAdapter();
+            dataTable = null;
+            DataSet ds = new DataSet();
+            try
+            {
+                myCommand.Connection = openConnection();
+                myCommand.CommandText = query;
+                myCommand.ExecuteNonQuery();
+                myAdapter.SelectCommand = myCommand;
+                myAdapter.Fill(ds);
+                dataTable = ds.Tables[0];
+            }
+            catch (SqlException ex)
+            {
+                for (int i = 0; i < ex.Errors.Count; i++)
+                {
+                    errorMessages.Append("Lỗi từ DB " + "Index #" + i + "\n" +
+                        "Message: " + ex.Errors[i].Message + "\n");
+                }
+                MessageBox.Show(errorMessages.ToString());
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dataTable;
+        }
 
-        public DataTable executeSelectQuery(String query, SqlParameter[] sqlParameters)
+        public DataTable executeSelectQueryWithParams(String query, SqlParameter[] sqlParameters)
         {
             SqlCommand myCommand = new SqlCommand();
             DataTable dataTable = new DataTable();
@@ -45,43 +79,27 @@ namespace WF_QuanLyXeBus.DAL
                 myAdapter.Fill(ds);
                 dataTable = ds.Tables[0];
             }
-            catch (SqlException e)
-            {
+            catch (SqlException ex)
+            {              
+                for (int i = 0; i < ex.Errors.Count; i++)
+                {
+                    errorMessages.Append("Lỗi từ DB " +"Index #" + i + "\n" +
+                        "Message: " + ex.Errors[i].Message + "\n");
+                }
+                MessageBox.Show(errorMessages.ToString());
                 return null;
-            }
-            finally
-            {
-
-            }
-            return dataTable;
-        }
-        public int executeFunctionQuery(String query, SqlParameter[] sqlParameters)
-        {
-            SqlCommand myCommand = new SqlCommand();
-            int check = 0;
-            try
-            {
-                myCommand.Connection = openConnection();
-                myCommand.CommandText = query;
-                myCommand.Parameters.AddRange(sqlParameters);
-                var result = myCommand.ExecuteReader();
-                result.Read();
-                check = result.GetInt32(0);
-            }
-            catch (SqlException e)
-            {
-                return check;
             }
             finally
             {
                 conn.Close();
             }
-            return check;
+            return dataTable;
         }
 
         public bool executeInsertQuery(String query, SqlParameter[] sqlParameters)
         {
             SqlCommand myCommand = new SqlCommand();
+            myAdapter = new SqlDataAdapter();
             try
             {
                 myCommand.Connection = openConnection();
@@ -90,13 +108,20 @@ namespace WF_QuanLyXeBus.DAL
                 myAdapter.InsertCommand = myCommand;
                 myCommand.ExecuteNonQuery();
             }
-            catch (SqlException e)
+            catch (SqlException ex)
             {
+                errorMessages = new StringBuilder();
+                for (int i = 0; i < ex.Errors.Count; i++)
+                {
+                    errorMessages.Append("Lỗi từ DB " + "Index #" + i + "\n"
+                        +"Message: " + ex.Errors[i].Message + "\n");
+                }
+                MessageBox.Show(errorMessages.ToString());
                 return false;
             }
             finally
             {
-                
+                conn.Close();
             }
             return true;
         }
@@ -104,6 +129,7 @@ namespace WF_QuanLyXeBus.DAL
         public bool executeUpdateQuery(String query, SqlParameter[] sqlParameters)
         {
             SqlCommand myCommand = new SqlCommand();
+            myAdapter = new SqlDataAdapter();
             try
             {
                 myCommand.Connection = openConnection();
@@ -112,15 +138,44 @@ namespace WF_QuanLyXeBus.DAL
                 myAdapter.UpdateCommand = myCommand;
                 myCommand.ExecuteNonQuery();
             }
-            catch (SqlException e)
+            catch (SqlException ex)
             {
+                errorMessages = new StringBuilder();
+                for (int i = 0; i < ex.Errors.Count; i++)
+                {
+                    errorMessages.Append("Lỗi từ DB " +"Index #" + i + "\n" +
+                        "Message: " + ex.Errors[i].Message + "\n");
+                }
+                MessageBox.Show(errorMessages.ToString());
                 return false;
             }
             finally
             {
+                conn.Close();
             }
             return true;
         }
+        //public SqlDataReader executeReaderQuery(String query, SqlParameter[] sqlParameters)
+        //{
+        //    SqlCommand myCommand = new SqlCommand();
+        //    SqlDataReader result = null;
+        //    try
+        //    {
+        //        myCommand.Connection = openConnection();
+        //        myCommand.CommandText = query;
+        //        myCommand.Parameters.AddRange(sqlParameters);
+        //        result = myCommand.ExecuteReader();
+        //    }
+        //    catch (SqlException)
+        //    {
+        //        return null;
+        //    }
+        //    finally
+        //    {
+        //        conn.Close();
+        //    }
+        //    return result;
+        //}
     }
     //public sqlconnection con = new sqlconnection(@"data source=hieu\sqlexpress;initial catalog=ql_tuyenxebus;integrated security=true");
     //    public sqlconnection getcon()

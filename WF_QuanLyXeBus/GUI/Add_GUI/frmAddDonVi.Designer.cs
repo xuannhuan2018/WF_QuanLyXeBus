@@ -37,10 +37,10 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.txtTenDonVi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.txtSDT = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.mskSDT = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // button3
@@ -51,6 +51,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.button3.TabIndex = 35;
             this.button3.Text = "Làm Mới";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -60,6 +61,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.button2.TabIndex = 34;
             this.button2.Text = "Hủy";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -69,6 +71,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.button1.TabIndex = 33;
             this.button1.Text = "Lưu";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -95,7 +98,6 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.txtTenDonVi.Name = "txtTenDonVi";
             this.txtTenDonVi.Size = new System.Drawing.Size(263, 26);
             this.txtTenDonVi.TabIndex = 18;
-            this.txtTenDonVi.TextChanged += new System.EventHandler(this.txtTenTuyen_TextChanged);
             // 
             // label1
             // 
@@ -114,14 +116,6 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(263, 26);
             this.txtDiaChi.TabIndex = 37;
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.Location = new System.Drawing.Point(260, 210);
-            this.txtSDT.Multiline = true;
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(263, 26);
-            this.txtSDT.TabIndex = 38;
             // 
             // label3
             // 
@@ -151,16 +145,24 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.txtEmail.Size = new System.Drawing.Size(263, 26);
             this.txtEmail.TabIndex = 41;
             // 
+            // mskSDT
+            // 
+            this.mskSDT.Location = new System.Drawing.Point(260, 206);
+            this.mskSDT.Mask = "999-000-0000";
+            this.mskSDT.Name = "mskSDT";
+            this.mskSDT.Size = new System.Drawing.Size(100, 22);
+            this.mskSDT.TabIndex = 42;
+            // 
             // frmAddDonVi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(620, 423);
+            this.ClientSize = new System.Drawing.Size(620, 428);
+            this.Controls.Add(this.mskSDT);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtSDT);
             this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
@@ -171,6 +173,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.Controls.Add(this.txtTenDonVi);
             this.Name = "frmAddDonVi";
             this.Text = "frmAddDonVi";
+            this.Load += new System.EventHandler(this.frmAddDonVi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,9 +189,9 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
         private System.Windows.Forms.TextBox txtTenDonVi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDiaChi;
-        private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.MaskedTextBox mskSDT;
     }
 }

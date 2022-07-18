@@ -10,27 +10,26 @@ namespace WF_QuanLyXeBus.DAL
 {
     public class DAL_Authentication
     {
-        private DAL_DBConnection conn;
+        private const String CHECK_LOGIN_QUERY = "Select * from TaiKhoan t where t.TenTaiKhoan = @username and t.MatKhau = @password";
+        private DAL_DBConnection conn;    
 
         public DAL_Authentication()
         {
             conn = new DAL_DBConnection();
         }
-        public bool checkLoginInforInDB(String username, String password)
+        public String checkLoginAndGetRoleInDB(String username, String password)
         {
-            String query = "SELECT COUNT(*) FROM TaiKhoan t WHERE t.TenTaiKhoan = @username and t.MatKhau = @password";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@username", SqlDbType.NVarChar);
             sqlParameters[0].Value = username;
             sqlParameters[1] = new SqlParameter("@password", SqlDbType.NVarChar);
             sqlParameters[1].Value = password;
-            bool check = false;
-            if(conn.executeFunctionQuery(query, sqlParameters) == 1)
+            DataTable result = conn.executeSelectQueryWithParams(CHECK_LOGIN_QUERY, sqlParameters);
+            if (result.Rows.Count != 0)
             {
-                check = true;
-            }       
-            return check;
-        }
-
+                return result.Rows[0].Field<String>("ChucVu");
+            }
+            return null;
+        }    
     }
 }

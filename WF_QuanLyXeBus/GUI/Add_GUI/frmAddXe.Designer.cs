@@ -29,11 +29,8 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtSDT = new System.Windows.Forms.TextBox();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -41,21 +38,16 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBienSo = new System.Windows.Forms.TextBox();
-            this.dtBirthday = new System.Windows.Forms.DateTimePicker();
+            this.dtNgaySX = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbLoaiXe = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbMaTuyen = new System.Windows.Forms.ComboBox();
+            this.mskSoGhe = new System.Windows.Forms.MaskedTextBox();
+            this.mskChuKiBaoHanh = new System.Windows.Forms.MaskedTextBox();
+            this.mskCongSuat = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(296, 220);
-            this.txtEmail.Multiline = true;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(263, 26);
-            this.txtEmail.TabIndex = 53;
             // 
             // label4
             // 
@@ -77,22 +69,6 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.label3.TabIndex = 51;
             this.label3.Text = "Số Ghế:";
             // 
-            // txtSDT
-            // 
-            this.txtSDT.Location = new System.Drawing.Point(296, 162);
-            this.txtSDT.Multiline = true;
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(263, 26);
-            this.txtSDT.TabIndex = 50;
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Location = new System.Drawing.Point(292, 328);
-            this.txtDiaChi.Multiline = true;
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(263, 26);
-            this.txtDiaChi.TabIndex = 49;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -111,6 +87,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.button3.TabIndex = 47;
             this.button3.Text = "Làm Mới";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -120,6 +97,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.button2.TabIndex = 46;
             this.button2.Text = "Hủy";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -129,6 +107,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.button1.TabIndex = 45;
             this.button1.Text = "Lưu";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -156,12 +135,12 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.txtBienSo.Size = new System.Drawing.Size(263, 26);
             this.txtBienSo.TabIndex = 42;
             // 
-            // dtBirthday
+            // dtNgaySX
             // 
-            this.dtBirthday.Location = new System.Drawing.Point(296, 272);
-            this.dtBirthday.Name = "dtBirthday";
-            this.dtBirthday.Size = new System.Drawing.Size(259, 22);
-            this.dtBirthday.TabIndex = 55;
+            this.dtNgaySX.Location = new System.Drawing.Point(296, 272);
+            this.dtNgaySX.Name = "dtNgaySX";
+            this.dtNgaySX.Size = new System.Drawing.Size(259, 22);
+            this.dtNgaySX.TabIndex = 55;
             // 
             // label5
             // 
@@ -207,16 +186,40 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             // 
             // cmbMaTuyen
             // 
-            this.cmbMaTuyen.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbMaTuyen.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cmbMaTuyen.FormattingEnabled = true;
-            this.cmbMaTuyen.Items.AddRange(new object[] {
-            "Cỡ Nhỏ",
-            "Cỡ Trung Bình",
-            "Cỡ To"});
             this.cmbMaTuyen.Location = new System.Drawing.Point(296, 390);
             this.cmbMaTuyen.Name = "cmbMaTuyen";
             this.cmbMaTuyen.Size = new System.Drawing.Size(263, 24);
             this.cmbMaTuyen.TabIndex = 59;
+            // 
+            // mskSoGhe
+            // 
+            this.mskSoGhe.Location = new System.Drawing.Point(296, 166);
+            this.mskSoGhe.Margin = new System.Windows.Forms.Padding(4);
+            this.mskSoGhe.Mask = "00";
+            this.mskSoGhe.Name = "mskSoGhe";
+            this.mskSoGhe.Size = new System.Drawing.Size(154, 22);
+            this.mskSoGhe.TabIndex = 60;
+            // 
+            // mskChuKiBaoHanh
+            // 
+            this.mskChuKiBaoHanh.Location = new System.Drawing.Point(296, 332);
+            this.mskChuKiBaoHanh.Margin = new System.Windows.Forms.Padding(4);
+            this.mskChuKiBaoHanh.Mask = "00 tháng";
+            this.mskChuKiBaoHanh.Name = "mskChuKiBaoHanh";
+            this.mskChuKiBaoHanh.Size = new System.Drawing.Size(154, 22);
+            this.mskChuKiBaoHanh.TabIndex = 61;
+            // 
+            // mskCongSuat
+            // 
+            this.mskCongSuat.Location = new System.Drawing.Point(296, 220);
+            this.mskCongSuat.Margin = new System.Windows.Forms.Padding(4);
+            this.mskCongSuat.Mask = "00000";
+            this.mskCongSuat.Name = "mskCongSuat";
+            this.mskCongSuat.Size = new System.Drawing.Size(154, 22);
+            this.mskCongSuat.TabIndex = 62;
+            this.mskCongSuat.ValidatingType = typeof(int);
             // 
             // frmAddXe
             // 
@@ -224,17 +227,17 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(620, 580);
+            this.Controls.Add(this.mskCongSuat);
+            this.Controls.Add(this.mskChuKiBaoHanh);
+            this.Controls.Add(this.mskSoGhe);
             this.Controls.Add(this.cmbMaTuyen);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cmbLoaiXe);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dtBirthday);
+            this.Controls.Add(this.dtNgaySX);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtSDT);
-            this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -244,18 +247,15 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.Controls.Add(this.txtBienSo);
             this.Name = "frmAddXe";
             this.Text = "frmAddXe";
+            this.Load += new System.EventHandler(this.frmAddXe_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtSDT;
-        private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
@@ -263,11 +263,14 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBienSo;
-        private System.Windows.Forms.DateTimePicker dtBirthday;
+        private System.Windows.Forms.DateTimePicker dtNgaySX;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbLoaiXe;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbMaTuyen;
+        private System.Windows.Forms.MaskedTextBox mskSoGhe;
+        private System.Windows.Forms.MaskedTextBox mskChuKiBaoHanh;
+        private System.Windows.Forms.MaskedTextBox mskCongSuat;
     }
 }

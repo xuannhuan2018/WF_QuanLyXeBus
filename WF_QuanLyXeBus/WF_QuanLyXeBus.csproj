@@ -47,8 +47,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\BUS_Authentication.cs" />
+    <Compile Include="BUS\BUS_QLDonVi.cs" />
+    <Compile Include="BUS\BUS_QLNhanVien.cs" />
+    <Compile Include="BUS\BUS_QLTaiXe.cs" />
+    <Compile Include="BUS\BUS_QLXe.cs" />
+    <Compile Include="BUS\BUS_RandomCodeForPKInDB.cs" />
+    <Compile Include="BUS\BUS_QLTuyenXe.cs" />
+    <Compile Include="BUS\BUS_ValidateInputValue.cs" />
     <Compile Include="DAL\DAL_Authentication.cs" />
     <Compile Include="DAL\DAL_DBConnection.cs" />
+    <Compile Include="DAL\DAL_QLDonVi.cs" />
+    <Compile Include="DAL\DAL_QLNhanVien.cs" />
+    <Compile Include="DAL\DAL_QLTaiXe.cs" />
+    <Compile Include="DAL\DAL_QLTuyenXe.cs" />
+    <Compile Include="DAL\DAL_QLXe.cs" />
     <Compile Include="DTO\DTO_DonViXe.cs" />
     <Compile Include="DTO\DTO_TaiKhoan.cs" />
     <Compile Include="DTO\DTO_TaiXe.cs" />

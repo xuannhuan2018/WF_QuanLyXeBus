@@ -39,7 +39,7 @@ namespace WF_QuanLyXeBus
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(262, 487);
+            this.btnDangNhap.Location = new System.Drawing.Point(262, 468);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(123, 49);
             this.btnDangNhap.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace WF_QuanLyXeBus
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(413, 487);
+            this.btnThoat.Location = new System.Drawing.Point(414, 468);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(123, 49);
             this.btnThoat.TabIndex = 1;
@@ -62,21 +62,23 @@ namespace WF_QuanLyXeBus
             this.txtUsername.Location = new System.Drawing.Point(262, 337);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(274, 47);
+            this.txtUsername.Size = new System.Drawing.Size(175, 26);
             this.txtUsername.TabIndex = 2;
+            this.txtUsername.Text = "admin";
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(262, 415);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(274, 47);
+            this.txtPassword.Size = new System.Drawing.Size(175, 24);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.Text = "123456";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WF_QuanLyXeBus.Properties.Resources.maxresdefault_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(103, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(138, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(433, 285);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -88,7 +90,7 @@ namespace WF_QuanLyXeBus
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(657, 559);
+            this.ClientSize = new System.Drawing.Size(714, 559);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);

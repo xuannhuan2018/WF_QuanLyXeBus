@@ -8,41 +8,22 @@ namespace WF_QuanLyXeBus.DTO
 {
     public class DTO_Xe
     {
-        private string maxe;
-        private string bienso;
-        private string loaixe;
-        private int soghe;
-        private int congsuat;
-        private DateTime ngaysanxuat;
-        private int chukybaohanh;
-        private string matuyen;
+        private String maXe;
+        private String bienSo;
+        private String loaiXe;
+        private int soGhe;
+        private int congSuat;
+        private DateTime ngaySanXuat;
+        private int chuKiBaoHanh;
+        private String maTuyen;
 
-
-        public string Maxe { get => maxe; set => maxe = value; }
-        public string Bienso { get => bienso; set => bienso = value; }
-        public string Loaixe { get => loaixe; set => loaixe = value; }
-        public int Soghe { get => soghe; set => soghe = value; }
-        public int Congsuat { get => congsuat; set => congsuat = value; }
-        public DateTime Ngaysanxuat { get => ngaysanxuat; set => ngaysanxuat = value; }
-        public int Chukybaohanh { get => chukybaohanh; set => chukybaohanh = value; }
-        public string Matuyen { get => matuyen; set => matuyen = value; }
-
-
-        public DTO_Xe()
-        {
-
-        }
-
-        public DTO_Xe(string maxe, string bienso, string loaixe, int soghe, int congsuat, DateTime ngaysx, int chuky, string matuyen)
-        {
-            this.matuyen = matuyen;
-            this.maxe = maxe;
-            this.bienso = bienso;
-            this.loaixe = loaixe;
-            this.congsuat = congsuat;
-            this.ngaysanxuat = ngaysx;
-            this.chukybaohanh = chuky;
-            this.soghe = soghe;
-        }
+        public string MaXe { get => maXe; set => maXe = value; }
+        public string BienSo { get => bienSo; set => bienSo = value; }
+        public string LoaiXe { get => loaiXe; set => loaiXe = value; }
+        public int SoGhe { get => soGhe; set => soGhe = value; }
+        public int CongSuat { get => congSuat; set => congSuat = value; }
+        public DateTime NgaySanXuat { get => ngaySanXuat; set => ngaySanXuat = value; }
+        public int ChuKiBaoHanh { get => chuKiBaoHanh; set => chuKiBaoHanh = value; }
+        public string MaTuyen { get => maTuyen; set => maTuyen = value; }
     }
 }

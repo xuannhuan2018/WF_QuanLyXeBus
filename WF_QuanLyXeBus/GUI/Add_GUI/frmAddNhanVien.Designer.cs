@@ -33,24 +33,20 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtSDT = new System.Windows.Forms.TextBox();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtTenDonVi = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbChucVu = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.dtBirthday = new System.Windows.Forms.DateTimePicker();
+            this.mskSDT = new System.Windows.Forms.MaskedTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtTenTaiKhoan = new System.Windows.Forms.TextBox();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button3
@@ -61,6 +57,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.button3.TabIndex = 47;
             this.button3.Text = "Làm Mới";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -70,6 +67,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.button2.TabIndex = 46;
             this.button2.Text = "Hủy";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -79,6 +77,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.button1.TabIndex = 45;
             this.button1.Text = "Lưu";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -88,103 +87,67 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.panel1.Size = new System.Drawing.Size(500, 3);
             this.panel1.TabIndex = 44;
             // 
-            // groupBox1
+            // txtHoTen
             // 
-            this.groupBox1.Controls.Add(this.cmbChucVu);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtSDT);
-            this.groupBox1.Controls.Add(this.txtDiaChi);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtTenDonVi);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(44, 32);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(539, 320);
-            this.groupBox1.TabIndex = 55;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông Tin Nhân Viên:";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(185, 219);
-            this.txtEmail.Multiline = true;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(263, 26);
-            this.txtEmail.TabIndex = 62;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(89, 219);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 26);
-            this.label4.TabIndex = 61;
-            this.label4.Text = "Email:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 174);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 26);
-            this.label3.TabIndex = 60;
-            this.label3.Text = "Số Điện Thoại:";
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.Location = new System.Drawing.Point(185, 174);
-            this.txtSDT.Multiline = true;
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(263, 26);
-            this.txtSDT.TabIndex = 59;
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Location = new System.Drawing.Point(185, 114);
-            this.txtDiaChi.Multiline = true;
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(263, 26);
-            this.txtDiaChi.TabIndex = 58;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(45, 114);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 26);
-            this.label1.TabIndex = 57;
-            this.label1.Text = "Ngày Sinh:";
+            this.txtHoTen.Location = new System.Drawing.Point(256, 65);
+            this.txtHoTen.Multiline = true;
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(263, 26);
+            this.txtHoTen.TabIndex = 55;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(39, 54);
+            this.label2.Location = new System.Drawing.Point(114, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 26);
             this.label2.TabIndex = 56;
             this.label2.Text = "Họ Và Tên:";
             // 
-            // txtTenDonVi
+            // label1
             // 
-            this.txtTenDonVi.Location = new System.Drawing.Point(185, 54);
-            this.txtTenDonVi.Multiline = true;
-            this.txtTenDonVi.Name = "txtTenDonVi";
-            this.txtTenDonVi.Size = new System.Drawing.Size(263, 26);
-            this.txtTenDonVi.TabIndex = 55;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(120, 125);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 26);
+            this.label1.TabIndex = 57;
+            this.label1.Text = "Ngày Sinh:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(81, 185);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(164, 26);
+            this.label3.TabIndex = 60;
+            this.label3.Text = "Số Điện Thoại:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(164, 230);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 26);
+            this.label4.TabIndex = 61;
+            this.label4.Text = "Email:";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(260, 230);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(263, 26);
+            this.txtEmail.TabIndex = 62;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(59, 274);
+            this.label5.Location = new System.Drawing.Point(134, 285);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 26);
             this.label5.TabIndex = 63;
@@ -194,82 +157,93 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             // 
             this.cmbChucVu.FormattingEnabled = true;
             this.cmbChucVu.Items.AddRange(new object[] {
-            "Trợ giá",
-            "Không trợ giá"});
-            this.cmbChucVu.Location = new System.Drawing.Point(185, 267);
+            "quanly",
+            "nhanvien"});
+            this.cmbChucVu.Location = new System.Drawing.Point(260, 278);
             this.cmbChucVu.Name = "cmbChucVu";
-            this.cmbChucVu.Size = new System.Drawing.Size(263, 33);
+            this.cmbChucVu.Size = new System.Drawing.Size(263, 24);
             this.cmbChucVu.TabIndex = 64;
             // 
-            // groupBox2
+            // dtBirthday
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(44, 384);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(539, 147);
-            this.groupBox2.TabIndex = 56;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tài Khoản Nhân Viên:";
+            this.dtBirthday.Location = new System.Drawing.Point(260, 125);
+            this.dtBirthday.Name = "dtBirthday";
+            this.dtBirthday.Size = new System.Drawing.Size(259, 22);
+            this.dtBirthday.TabIndex = 65;
             // 
-            // textBox1
+            // mskSDT
             // 
-            this.textBox1.Location = new System.Drawing.Point(225, 109);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(223, 26);
-            this.textBox1.TabIndex = 68;
+            this.mskSDT.Location = new System.Drawing.Point(260, 181);
+            this.mskSDT.Mask = "999-000-0000";
+            this.mskSDT.Name = "mskSDT";
+            this.mskSDT.Size = new System.Drawing.Size(150, 22);
+            this.mskSDT.TabIndex = 66;
             // 
-            // label6
+            // label8
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(89, 109);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 26);
-            this.label6.TabIndex = 67;
-            this.label6.Text = "Mật Khẩu:";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(134, 412);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(180, 26);
+            this.label8.TabIndex = 66;
+            this.label8.Text = "Tên Đăng Nhập:";
             // 
-            // label7
+            // label9
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(39, 49);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(180, 26);
-            this.label7.TabIndex = 66;
-            this.label7.Text = "Tên Đăng Nhập:";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(184, 472);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(126, 26);
+            this.label9.TabIndex = 67;
+            this.label9.Text = "Mật Khẩu:";
             // 
-            // textBox2
+            // txtTenTaiKhoan
             // 
-            this.textBox2.Location = new System.Drawing.Point(225, 49);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(223, 26);
-            this.textBox2.TabIndex = 65;
+            this.txtTenTaiKhoan.Location = new System.Drawing.Point(320, 412);
+            this.txtTenTaiKhoan.Multiline = true;
+            this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
+            this.txtTenTaiKhoan.Size = new System.Drawing.Size(223, 26);
+            this.txtTenTaiKhoan.TabIndex = 65;
+            // 
+            // txtMatKhau
+            // 
+            this.txtMatKhau.Location = new System.Drawing.Point(320, 472);
+            this.txtMatKhau.Multiline = true;
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.Size = new System.Drawing.Size(223, 26);
+            this.txtMatKhau.TabIndex = 68;
             // 
             // frmAddNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(620, 639);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(612, 639);
+            this.Controls.Add(this.txtMatKhau);
+            this.Controls.Add(this.mskSDT);
+            this.Controls.Add(this.txtTenTaiKhoan);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.dtBirthday);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.cmbChucVu);
             this.Controls.Add(this.button3);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtHoTen);
             this.Name = "frmAddNhanVien";
             this.Text = "frmAddNhanVien";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.Load += new System.EventHandler(this.frmAddNhanVien_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -279,21 +253,19 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtSDT;
-        private System.Windows.Forms.TextBox txtDiaChi;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtTenDonVi;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbChucVu;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dtBirthday;
+        private System.Windows.Forms.MaskedTextBox mskSDT;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtTenTaiKhoan;
+        private System.Windows.Forms.TextBox txtMatKhau;
     }
 }

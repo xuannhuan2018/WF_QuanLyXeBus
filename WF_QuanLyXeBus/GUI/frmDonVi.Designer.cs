@@ -29,6 +29,7 @@ namespace WF_QuanLyXeBus.GUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.plDonVi = new System.Windows.Forms.Panel();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -36,53 +37,71 @@ namespace WF_QuanLyXeBus.GUI
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.dgvDonVi = new System.Windows.Forms.DataGridView();
+            this.plDonVi.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonVi)).BeginInit();
             this.SuspendLayout();
             // 
+            // plDonVi
+            // 
+            this.plDonVi.Controls.Add(this.btnLamMoi);
+            this.plDonVi.Controls.Add(this.btnXoa);
+            this.plDonVi.Controls.Add(this.btnSua);
+            this.plDonVi.Controls.Add(this.btnThem);
+            this.plDonVi.Controls.Add(this.groupBox1);
+            this.plDonVi.Controls.Add(this.dgvDonVi);
+            this.plDonVi.Location = new System.Drawing.Point(0, 1);
+            this.plDonVi.Name = "plDonVi";
+            this.plDonVi.Size = new System.Drawing.Size(800, 615);
+            this.plDonVi.TabIndex = 2;
+            // 
             // btnLamMoi
             // 
-            this.btnLamMoi.Location = new System.Drawing.Point(626, 492);
+            this.btnLamMoi.Location = new System.Drawing.Point(625, 509);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(141, 58);
-            this.btnLamMoi.TabIndex = 12;
+            this.btnLamMoi.TabIndex = 6;
             this.btnLamMoi.Text = "Làm Mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(418, 492);
+            this.btnXoa.Location = new System.Drawing.Point(417, 509);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(141, 58);
-            this.btnXoa.TabIndex = 11;
+            this.btnXoa.TabIndex = 5;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(227, 492);
+            this.btnSua.Location = new System.Drawing.Point(226, 509);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(141, 58);
-            this.btnSua.TabIndex = 10;
+            this.btnSua.TabIndex = 4;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(42, 492);
+            this.btnThem.Location = new System.Drawing.Point(41, 509);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(141, 58);
-            this.btnThem.TabIndex = 9;
+            this.btnThem.TabIndex = 3;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtTimKiem);
-            this.groupBox1.Location = new System.Drawing.Point(14, 48);
+            this.groupBox1.Location = new System.Drawing.Point(13, 65);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(333, 81);
-            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm Kiếm Thông Tin Đơn Vị";
             // 
@@ -93,31 +112,31 @@ namespace WF_QuanLyXeBus.GUI
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(308, 33);
             this.txtTimKiem.TabIndex = 1;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtTimKiem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // dgvDonVi
             // 
             this.dgvDonVi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDonVi.Location = new System.Drawing.Point(1, 135);
+            this.dgvDonVi.Location = new System.Drawing.Point(0, 152);
             this.dgvDonVi.Name = "dgvDonVi";
             this.dgvDonVi.RowHeadersWidth = 51;
             this.dgvDonVi.RowTemplate.Height = 24;
             this.dgvDonVi.Size = new System.Drawing.Size(795, 262);
-            this.dgvDonVi.TabIndex = 7;
+            this.dgvDonVi.TabIndex = 0;
+            this.dgvDonVi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDonVi_CellClick);
             // 
             // frmDonVi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(797, 598);
-            this.Controls.Add(this.btnLamMoi);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dgvDonVi);
+            this.ClientSize = new System.Drawing.Size(800, 616);
+            this.Controls.Add(this.plDonVi);
             this.Name = "frmDonVi";
             this.Text = "frmDonVi";
+            this.Load += new System.EventHandler(this.frmDonVi_Load);
+            this.plDonVi.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonVi)).EndInit();
@@ -127,6 +146,7 @@ namespace WF_QuanLyXeBus.GUI
 
         #endregion
 
+        private System.Windows.Forms.Panel plDonVi;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;

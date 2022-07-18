@@ -17,9 +17,9 @@ namespace WF_QuanLyXeBus.BAL
             DAL_Auth = new DAL_Authentication();
 
         }
-        public bool checkLogin(String username, String password)
+        public String checkLoginAndGetRole(String username, String password)
         {
-            return DAL_Auth.checkLoginInforInDB(username, password);
+            return DAL_Auth.checkLoginAndGetRoleInDB(username, password);
         }
     }
 }

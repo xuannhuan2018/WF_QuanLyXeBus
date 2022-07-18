@@ -33,7 +33,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmbMaSoXe = new System.Windows.Forms.ComboBox();
+            this.cmbMaXeLai = new System.Windows.Forms.ComboBox();
             this.txtQuequan = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,13 +45,12 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtHoTen = new System.Windows.Forms.TextBox();
-            this.dtBirthday = new System.Windows.Forms.DateTimePicker();
-            this.rbNam = new System.Windows.Forms.RadioButton();
-            this.rbNu = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.txtMaBangLai = new System.Windows.Forms.TextBox();
-            this.txtLuong = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.cmbGioiTinh = new System.Windows.Forms.ComboBox();
+            this.dtBirthday = new System.Windows.Forms.DateTimePicker();
+            this.mskLuong = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // button3
@@ -62,6 +61,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.button3.TabIndex = 35;
             this.button3.Text = "Làm Mới";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -71,6 +71,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.button2.TabIndex = 34;
             this.button2.Text = "Hủy";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -80,6 +81,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.button1.TabIndex = 33;
             this.button1.Text = "Lưu";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -89,16 +91,13 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.panel1.Size = new System.Drawing.Size(500, 3);
             this.panel1.TabIndex = 32;
             // 
-            // cmbMaSoXe
+            // cmbMaXeLai
             // 
-            this.cmbMaSoXe.FormattingEnabled = true;
-            this.cmbMaSoXe.Items.AddRange(new object[] {
-            "Trợ giá",
-            "Không trợ giá"});
-            this.cmbMaSoXe.Location = new System.Drawing.Point(270, 499);
-            this.cmbMaSoXe.Name = "cmbMaSoXe";
-            this.cmbMaSoXe.Size = new System.Drawing.Size(263, 24);
-            this.cmbMaSoXe.TabIndex = 31;
+            this.cmbMaXeLai.FormattingEnabled = true;
+            this.cmbMaXeLai.Location = new System.Drawing.Point(270, 499);
+            this.cmbMaXeLai.Name = "cmbMaXeLai";
+            this.cmbMaXeLai.Size = new System.Drawing.Size(263, 24);
+            this.cmbMaXeLai.TabIndex = 31;
             // 
             // txtQuequan
             // 
@@ -200,35 +199,6 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.txtHoTen.Size = new System.Drawing.Size(263, 26);
             this.txtHoTen.TabIndex = 36;
             // 
-            // dtBirthday
-            // 
-            this.dtBirthday.Location = new System.Drawing.Point(270, 94);
-            this.dtBirthday.Name = "dtBirthday";
-            this.dtBirthday.Size = new System.Drawing.Size(259, 22);
-            this.dtBirthday.TabIndex = 37;
-            // 
-            // rbNam
-            // 
-            this.rbNam.AutoSize = true;
-            this.rbNam.Location = new System.Drawing.Point(292, 158);
-            this.rbNam.Name = "rbNam";
-            this.rbNam.Size = new System.Drawing.Size(58, 21);
-            this.rbNam.TabIndex = 38;
-            this.rbNam.TabStop = true;
-            this.rbNam.Text = "Nam";
-            this.rbNam.UseVisualStyleBackColor = true;
-            // 
-            // rbNu
-            // 
-            this.rbNu.AutoSize = true;
-            this.rbNu.Location = new System.Drawing.Point(404, 158);
-            this.rbNu.Name = "rbNu";
-            this.rbNu.Size = new System.Drawing.Size(47, 21);
-            this.rbNu.TabIndex = 39;
-            this.rbNu.TabStop = true;
-            this.rbNu.Text = "Nữ";
-            this.rbNu.UseVisualStyleBackColor = true;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -246,13 +216,6 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.txtMaBangLai.Size = new System.Drawing.Size(263, 22);
             this.txtMaBangLai.TabIndex = 41;
             // 
-            // txtLuong
-            // 
-            this.txtLuong.Location = new System.Drawing.Point(270, 447);
-            this.txtLuong.Name = "txtLuong";
-            this.txtLuong.Size = new System.Drawing.Size(216, 22);
-            this.txtLuong.TabIndex = 42;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -263,25 +226,52 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.label9.TabIndex = 43;
             this.label9.Text = "Xe lái:";
             // 
+            // cmbGioiTinh
+            // 
+            this.cmbGioiTinh.FormattingEnabled = true;
+            this.cmbGioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ",
+            "Khác"});
+            this.cmbGioiTinh.Location = new System.Drawing.Point(266, 153);
+            this.cmbGioiTinh.Name = "cmbGioiTinh";
+            this.cmbGioiTinh.Size = new System.Drawing.Size(263, 24);
+            this.cmbGioiTinh.TabIndex = 44;
+            // 
+            // dtBirthday
+            // 
+            this.dtBirthday.Location = new System.Drawing.Point(266, 98);
+            this.dtBirthday.Name = "dtBirthday";
+            this.dtBirthday.Size = new System.Drawing.Size(259, 22);
+            this.dtBirthday.TabIndex = 56;
+            // 
+            // mskLuong
+            // 
+            this.mskLuong.Location = new System.Drawing.Point(266, 447);
+            this.mskLuong.Mask = "0000000000";
+            this.mskLuong.Name = "mskLuong";
+            this.mskLuong.Size = new System.Drawing.Size(100, 22);
+            this.mskLuong.TabIndex = 57;
+            this.mskLuong.ValidatingType = typeof(int);
+            // 
             // frmAddTaiXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(620, 669);
+            this.Controls.Add(this.mskLuong);
+            this.Controls.Add(this.dtBirthday);
+            this.Controls.Add(this.cmbGioiTinh);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtLuong);
             this.Controls.Add(this.txtMaBangLai);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.rbNu);
-            this.Controls.Add(this.rbNam);
-            this.Controls.Add(this.dtBirthday);
             this.Controls.Add(this.txtHoTen);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.cmbMaSoXe);
+            this.Controls.Add(this.cmbMaXeLai);
             this.Controls.Add(this.txtQuequan);
             this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.label7);
@@ -294,6 +284,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.Controls.Add(this.label1);
             this.Name = "frmAddTaiXe";
             this.Text = "frmAddTaiXe";
+            this.Load += new System.EventHandler(this.frmAddTaiXe_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,7 +296,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cmbMaSoXe;
+        private System.Windows.Forms.ComboBox cmbMaXeLai;
         private System.Windows.Forms.TextBox txtQuequan;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label7;
@@ -317,12 +308,11 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtHoTen;
-        private System.Windows.Forms.DateTimePicker dtBirthday;
-        private System.Windows.Forms.RadioButton rbNam;
-        private System.Windows.Forms.RadioButton rbNu;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtMaBangLai;
-        private System.Windows.Forms.TextBox txtLuong;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cmbGioiTinh;
+        private System.Windows.Forms.DateTimePicker dtBirthday;
+        private System.Windows.Forms.MaskedTextBox mskLuong;
     }
 }
