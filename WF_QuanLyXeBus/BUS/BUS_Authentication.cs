@@ -7,19 +7,19 @@ using WF_QuanLyXeBus.DTO;
 using System.Windows.Forms;
 using WF_QuanLyXeBus.DAL;
 
-namespace WF_QuanLyXeBus.BAL
+namespace WF_QuanLyXeBus.BUS
 {
-    partial class BAL_Authentication
+    partial class BUS_Authentication
     {
-        private DAL_Authentication DAL_Auth;
-        public BAL_Authentication()
+        private DAL_Authentication dal_Auth;
+        public BUS_Authentication()
         {
-            DAL_Auth = new DAL_Authentication();
+            dal_Auth = new DAL_Authentication();
 
         }
         public String checkLoginAndGetRole(String username, String password)
         {
-            return DAL_Auth.checkLoginAndGetRoleInDB(username, password);
+            return dal_Auth.checkLoginAndGetRoleInDB(username, password);
         }
     }
 }

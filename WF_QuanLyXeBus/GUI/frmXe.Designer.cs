@@ -52,11 +52,13 @@ namespace WF_QuanLyXeBus.GUI
             this.plbody.Controls.Add(this.dgvXe);
             this.plbody.Location = new System.Drawing.Point(0, 1);
             this.plbody.Name = "plbody";
-            this.plbody.Size = new System.Drawing.Size(800, 615);
+            this.plbody.Size = new System.Drawing.Size(812, 615);
             this.plbody.TabIndex = 4;
             // 
             // btnLamMoi
             // 
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnLamMoi.Location = new System.Drawing.Point(625, 509);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(141, 58);
@@ -67,6 +69,8 @@ namespace WF_QuanLyXeBus.GUI
             // 
             // btnXoa
             // 
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnXoa.Location = new System.Drawing.Point(417, 509);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(141, 58);
@@ -77,6 +81,8 @@ namespace WF_QuanLyXeBus.GUI
             // 
             // btnSua
             // 
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSua.Location = new System.Drawing.Point(226, 509);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(141, 58);
@@ -87,6 +93,8 @@ namespace WF_QuanLyXeBus.GUI
             // 
             // btnThem
             // 
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThem.Location = new System.Drawing.Point(41, 509);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(141, 58);
@@ -98,7 +106,8 @@ namespace WF_QuanLyXeBus.GUI
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtTimKiem);
-            this.groupBox1.Location = new System.Drawing.Point(13, 65);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.groupBox1.Location = new System.Drawing.Point(9, 44);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(333, 81);
             this.groupBox1.TabIndex = 2;
@@ -117,11 +126,11 @@ namespace WF_QuanLyXeBus.GUI
             // dgvXe
             // 
             this.dgvXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvXe.Location = new System.Drawing.Point(0, 152);
+            this.dgvXe.Location = new System.Drawing.Point(9, 152);
             this.dgvXe.Name = "dgvXe";
             this.dgvXe.RowHeadersWidth = 51;
             this.dgvXe.RowTemplate.Height = 24;
-            this.dgvXe.Size = new System.Drawing.Size(795, 262);
+            this.dgvXe.Size = new System.Drawing.Size(797, 316);
             this.dgvXe.TabIndex = 0;
             this.dgvXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvXe_CellClick);
             // 
@@ -130,7 +139,7 @@ namespace WF_QuanLyXeBus.GUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 616);
+            this.ClientSize = new System.Drawing.Size(812, 616);
             this.Controls.Add(this.plbody);
             this.Name = "frmXe";
             this.Text = "frmXe";

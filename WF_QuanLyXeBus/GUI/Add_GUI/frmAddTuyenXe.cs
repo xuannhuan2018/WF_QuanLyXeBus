@@ -140,6 +140,9 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             txtLuotVe.ResetText();
         }
 
-      
+        private void txtLuotVe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
