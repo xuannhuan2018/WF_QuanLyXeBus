@@ -53,7 +53,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             // 
             // txtTenTuyen
             // 
-            this.txtTenTuyen.Location = new System.Drawing.Point(683, 23);
+            this.txtTenTuyen.Location = new System.Drawing.Point(702, 23);
             this.txtTenTuyen.Multiline = true;
             this.txtTenTuyen.Name = "txtTenTuyen";
             this.txtTenTuyen.Size = new System.Drawing.Size(191, 26);
