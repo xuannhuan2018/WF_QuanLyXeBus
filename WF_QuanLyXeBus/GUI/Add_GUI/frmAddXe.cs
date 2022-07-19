@@ -132,5 +132,10 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             cmbMaTuyen.ResetText();
 
         }
+
+        private void dtNgaySX_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

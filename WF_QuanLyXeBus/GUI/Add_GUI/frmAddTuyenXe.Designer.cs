@@ -53,17 +53,17 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             // 
             // txtTenTuyen
             // 
-            this.txtTenTuyen.Location = new System.Drawing.Point(278, 79);
+            this.txtTenTuyen.Location = new System.Drawing.Point(683, 23);
             this.txtTenTuyen.Multiline = true;
             this.txtTenTuyen.Name = "txtTenTuyen";
-            this.txtTenTuyen.Size = new System.Drawing.Size(263, 26);
+            this.txtTenTuyen.Size = new System.Drawing.Size(191, 26);
             this.txtTenTuyen.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(111, 19);
+            this.label1.Location = new System.Drawing.Point(70, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 26);
             this.label1.TabIndex = 1;
@@ -73,7 +73,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(118, 79);
+            this.label2.Location = new System.Drawing.Point(550, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 26);
             this.label2.TabIndex = 2;
@@ -82,36 +82,36 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             // cmbMaDV
             // 
             this.cmbMaDV.FormattingEnabled = true;
-            this.cmbMaDV.Location = new System.Drawing.Point(278, 23);
+            this.cmbMaDV.Location = new System.Drawing.Point(222, 23);
             this.cmbMaDV.Name = "cmbMaDV";
-            this.cmbMaDV.Size = new System.Drawing.Size(263, 24);
+            this.cmbMaDV.Size = new System.Drawing.Size(145, 24);
             this.cmbMaDV.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(141, 138);
+            this.label3.Location = new System.Drawing.Point(69, 80);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 26);
+            this.label3.Size = new System.Drawing.Size(208, 26);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Bắt Đầu:";
+            this.label3.Text = "Thời gian Bắt Đầu:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(129, 192);
+            this.label4.Location = new System.Drawing.Point(550, 80);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 26);
+            this.label4.Size = new System.Drawing.Size(220, 26);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Kết Thúc:";
+            this.label4.Text = "Thời gian Kết Thúc:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(55, 279);
+            this.label5.Location = new System.Drawing.Point(69, 194);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(198, 26);
             this.label5.TabIndex = 8;
@@ -121,7 +121,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(55, 368);
+            this.label6.Location = new System.Drawing.Point(550, 194);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(202, 26);
             this.label6.TabIndex = 9;
@@ -131,7 +131,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(110, 460);
+            this.label7.Location = new System.Drawing.Point(69, 421);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(135, 26);
             this.label7.TabIndex = 10;
@@ -139,19 +139,20 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             // 
             // txtLuotDi
             // 
-            this.txtLuotDi.Location = new System.Drawing.Point(274, 283);
+            this.txtLuotDi.Location = new System.Drawing.Point(74, 223);
             this.txtLuotDi.Multiline = true;
             this.txtLuotDi.Name = "txtLuotDi";
-            this.txtLuotDi.Size = new System.Drawing.Size(263, 66);
+            this.txtLuotDi.Size = new System.Drawing.Size(321, 170);
             this.txtLuotDi.TabIndex = 11;
             // 
             // txtLuotVe
             // 
-            this.txtLuotVe.Location = new System.Drawing.Point(274, 368);
+            this.txtLuotVe.Location = new System.Drawing.Point(555, 223);
             this.txtLuotVe.Multiline = true;
             this.txtLuotVe.Name = "txtLuotVe";
-            this.txtLuotVe.Size = new System.Drawing.Size(263, 66);
+            this.txtLuotVe.Size = new System.Drawing.Size(321, 170);
             this.txtLuotVe.TabIndex = 12;
+            this.txtLuotVe.TextChanged += new System.EventHandler(this.txtLuotVe_TextChanged);
             // 
             // cmbLoaiTuyen
             // 
@@ -159,54 +160,60 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.cmbLoaiTuyen.Items.AddRange(new object[] {
             "Trợ giá",
             "Không trợ giá"});
-            this.cmbLoaiTuyen.Location = new System.Drawing.Point(274, 460);
+            this.cmbLoaiTuyen.Location = new System.Drawing.Point(210, 425);
             this.cmbLoaiTuyen.Name = "cmbLoaiTuyen";
-            this.cmbLoaiTuyen.Size = new System.Drawing.Size(263, 24);
+            this.cmbLoaiTuyen.Size = new System.Drawing.Size(106, 24);
             this.cmbLoaiTuyen.TabIndex = 13;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(94, 509);
+            this.panel1.Location = new System.Drawing.Point(85, 469);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(500, 10);
+            this.panel1.Size = new System.Drawing.Size(789, 5);
             this.panel1.TabIndex = 14;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(146, 543);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button1.Location = new System.Drawing.Point(188, 509);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 38);
             this.button1.TabIndex = 15;
             this.button1.Text = "Lưu";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(471, 543);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button2.Location = new System.Drawing.Point(624, 509);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(114, 38);
             this.button2.TabIndex = 16;
             this.button2.Text = "Hủy";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(309, 543);
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button3.Location = new System.Drawing.Point(417, 509);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(114, 38);
             this.button3.TabIndex = 17;
             this.button3.Text = "Làm Mới";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(116, 236);
+            this.label9.Location = new System.Drawing.Point(69, 144);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(129, 26);
             this.label9.TabIndex = 19;
@@ -214,29 +221,29 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             // 
             // mskTgKetThuc
             // 
-            this.mskTgKetThuc.Location = new System.Drawing.Point(274, 196);
+            this.mskTgKetThuc.Location = new System.Drawing.Point(777, 84);
             this.mskTgKetThuc.Margin = new System.Windows.Forms.Padding(4);
             this.mskTgKetThuc.Mask = "00:00:00";
             this.mskTgKetThuc.Name = "mskTgKetThuc";
-            this.mskTgKetThuc.Size = new System.Drawing.Size(247, 22);
+            this.mskTgKetThuc.Size = new System.Drawing.Size(69, 22);
             this.mskTgKetThuc.TabIndex = 32;
             // 
             // mskTgBatDau
             // 
-            this.mskTgBatDau.Location = new System.Drawing.Point(278, 138);
+            this.mskTgBatDau.Location = new System.Drawing.Point(281, 84);
             this.mskTgBatDau.Margin = new System.Windows.Forms.Padding(4);
             this.mskTgBatDau.Mask = "00:00:00";
             this.mskTgBatDau.Name = "mskTgBatDau";
-            this.mskTgBatDau.Size = new System.Drawing.Size(247, 22);
+            this.mskTgBatDau.Size = new System.Drawing.Size(86, 22);
             this.mskTgBatDau.TabIndex = 33;
             // 
             // mskTgGianCach
             // 
-            this.mskTgGianCach.Location = new System.Drawing.Point(274, 240);
+            this.mskTgGianCach.Location = new System.Drawing.Point(210, 144);
             this.mskTgGianCach.Margin = new System.Windows.Forms.Padding(4);
             this.mskTgGianCach.Mask = "00 phút";
             this.mskTgGianCach.Name = "mskTgGianCach";
-            this.mskTgGianCach.Size = new System.Drawing.Size(247, 22);
+            this.mskTgGianCach.Size = new System.Drawing.Size(77, 22);
             this.mskTgGianCach.TabIndex = 34;
             // 
             // frmAddTuyenXe
@@ -244,7 +251,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(620, 637);
+            this.ClientSize = new System.Drawing.Size(943, 590);
             this.Controls.Add(this.mskTgGianCach);
             this.Controls.Add(this.mskTgBatDau);
             this.Controls.Add(this.mskTgKetThuc);
@@ -265,6 +272,7 @@ namespace WF_QuanLyXeBus.GUI.Add_GUI
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTenTuyen);
+            this.MaximizeBox = false;
             this.Name = "frmAddTuyenXe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddTuyenXe";
